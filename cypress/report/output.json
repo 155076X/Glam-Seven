@@ -1,0 +1,265 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2023-11-26T09:18:08.653Z",
+    "end": "2023-11-26T09:18:56.565Z",
+    "duration": 47912
+  },
+  "results": [
+    {
+      "uuid": "f9324433-e40e-44ec-b11c-f4ee6eadbcba",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login.cy.ts",
+      "file": "cypress\\e2e\\Login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a1ce853f-dd39-4b17-a2c5-398091187551",
+          "title": "template 1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test",
+              "fullTitle": "template 1 test",
+              "timedOut": null,
+              "duration": 4886,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.Navigate('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\nloginPage.EnterUserName('Admin');\nloginPage.EnterPassword('admin123');\nloginPage.LoginToWebSite();",
+              "err": {},
+              "uuid": "5675b26b-489b-4b80-a13a-0a7962b7236e",
+              "parentUUID": "a1ce853f-dd39-4b17-a2c5-398091187551",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5675b26b-489b-4b80-a13a-0a7962b7236e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4886,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fc29193f-54ab-4a5b-b6b4-7adfaa6eccb7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec.cy.ts",
+      "file": "cypress\\e2e\\spec.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9e9a63a0-bbe6-4b70-9b24-3386d5a43c8d",
+          "title": "template 1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "template 1 passes",
+              "timedOut": null,
+              "duration": 6063,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('www.google.com');\ncy.get('#APjFqb').type('Cat{Enter}');",
+              "err": {},
+              "uuid": "3f3e0161-b2fd-4736-8db5-48c317a1118c",
+              "parentUUID": "9e9a63a0-bbe6-4b70-9b24-3386d5a43c8d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test",
+              "fullTitle": "template 1 test",
+              "timedOut": null,
+              "duration": 6237,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.xpath('//input[@placeholder=\"Username\"]').type('Admin');\ncy.xpath(\"//input[@placeholder='Password']\").type('admin123');\ncy.xpath(\"//button[@type='submit']\").click();\ncy.contains('Admin').click();",
+              "err": {},
+              "uuid": "b9aadb6d-0219-46b3-9847-1fbb9f82ab5f",
+              "parentUUID": "9e9a63a0-bbe6-4b70-9b24-3386d5a43c8d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test3",
+              "fullTitle": "template 1 test3",
+              "timedOut": null,
+              "duration": 6685,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.xpath('//input[@placeholder=\"Username\"]').type('Admin');\ncy.xpath(\"//input[@placeholder='Password']\").type('admin123');\ncy.xpath(\"//button[@type='submi']\").click();\ncy.contains('Admin').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@type='submi']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@type='submi']`, but never found it.\n    at Context.eval (webpack://typescript/./cypress/e2e/spec.cy.ts:18:0)",
+                "diff": null
+              },
+              "uuid": "00aea3f1-4c69-4cdd-91b6-b776519fb5c0",
+              "parentUUID": "9e9a63a0-bbe6-4b70-9b24-3386d5a43c8d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3f3e0161-b2fd-4736-8db5-48c317a1118c",
+            "b9aadb6d-0219-46b3-9847-1fbb9f82ab5f"
+          ],
+          "failures": [
+            "00aea3f1-4c69-4cdd-91b6-b776519fb5c0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18985,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9fef249a-5489-4add-ae29-94f0e02b2351",
+      "title": "",
+      "fullFile": "cypress\\e2e\\assertions.cy.ts",
+      "file": "cypress\\e2e\\assertions.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9266944f-ec10-4a85-a2fb-8b38720b72d3",
+          "title": "Assertions examples",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Learning Assertions ",
+              "fullTitle": "Assertions examples Learning Assertions ",
+              "timedOut": null,
+              "duration": 3112,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://example.cypress.io/');\ncy.contains('get').click();\ncy.xpath('//button[@id=\"query-btn\"]').should('have.id', 'query-btn');\ncy.xpath('//button[@id=\"query-btn\"]')\n    .should('contain', 'Button')\n    .should('be.visible');\ncy.xpath('//button[@id=\"query-btn\"]').invoke('attr', 'class')\n    .should('equal', 'query-btn btn btn-primary');\ncy.xpath('//button[@id=\"query-btn\"]')\n    .should('contain', 'Button')\n    .and('have.id', 'query-btn');",
+              "err": {},
+              "uuid": "0a8bb8fd-ba28-4c99-a8f1-bba7db3f29ef",
+              "parentUUID": "9266944f-ec10-4a85-a2fb-8b38720b72d3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0a8bb8fd-ba28-4c99-a8f1-bba7db3f29ef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3112,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
